@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "nomadcoffee-app-ver2",
+    "slug": "nomadcoffee-app-ver2",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "nomadcoffee-app-ver2"
+}
