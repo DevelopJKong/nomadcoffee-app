@@ -1,9 +1,9 @@
-import { View, Animated, StyleSheet } from 'react-native';
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { View, Animated, StyleSheet } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import { Asset } from 'expo-asset';
-import Test from './src/test';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Main from './src/pages/main.page';
 
 interface IAppLoader {
   children: React.ReactNode;
@@ -20,7 +20,7 @@ const App = () => {
   return (
     <AnimatedAppLoader image={{ uri: 'https://i.imgur.com/dtuN6qr.png[/img]' }}>
       <SafeAreaProvider>
-        <Test />
+        <Main />
       </SafeAreaProvider>
     </AnimatedAppLoader>
   );
@@ -35,7 +35,9 @@ function AnimatedAppLoader({ children, image }: IAppLoader) {
       setSplashReady(true);
     }
 
-    prepare();
+    prepare().then(res => {
+      console.log(res);
+    });
   }, [image]);
 
   if (!isSplashReady) {
@@ -80,7 +82,7 @@ function AnimatedSplashScreen({ children, image }: IAppLoader) {
       {isAppReady && children}
       {!isAnimationComplete && (
         <Animated.View
-          pointerEvents="none"
+          pointerEvents='none'
           style={[
             StyleSheet.absoluteFill,
             {

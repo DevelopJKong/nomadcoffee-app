@@ -14,6 +14,7 @@ module.exports = {
   },
   ignorePatterns: ['.eslintrc.js', 'node_modules/', 'dist/', 'build/', 'coverage/', 'metro.config.js', 'index.ts'],
   rules: {
+    'react/react-in-jsx-scope': 'off',
     'spaced-comment': 'warn', // ! 주석에 공백을 사용하면 경고를 발생시킵니다.
     'no-debugger': 'warn', // ! debugger 사용하면 경고를 발생시킵니다.
     'prefer-spread': 'off', // ! apply 사용 허용
