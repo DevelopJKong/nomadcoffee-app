@@ -1,20 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es5", //  es5 는 IE11 에서 지원
-    "lib": ["dom", "dom.iterable", "esnext"], //  dom, dom.iterable, esnext 는 IE11 에서 지원
-    "allowJs": true, //  js 파일을 ts 파일로 변환
-    "skipLibCheck": true, //  타입스크립트가 라이브러리를 체크하지 않도록 함
-    "esModuleInterop": true, //  esModuleInterop 는 import * as React from 'react' 를 import React from 'react' 로 바꿔줌
-    "allowSyntheticDefaultImports": true, //  allowSyntheticDefaultImports 는 import React from 'react' 를 import React = require('react') 로 바꿔줌
-    "strict": true, //  strict 는 모든 타입 검사 옵션을 활성화
-    "forceConsistentCasingInFileNames": true, //  파일 이름의 대소문자를 일관되게 유지
-    "noFallthroughCasesInSwitch": true, //  switch 문에 default 를 꼭 넣어야 함
-    "module": "esnext", //  esnext 는 IE11 에서 지원
-    "moduleResolution": "node", //  node 는 IE11 에서 지원
-    "resolveJsonModule": true, //  json 파일을 import 할 수 있게 함
-    "isolatedModules": true, //  isolatedModules 는 ts 파일을 js 파일로 변환할 때 사용
-    "noEmit": true, //  noEmit 는 js 파일을 생성하지 않음
-    "jsx": "react-jsx" //  jsx 는 react-jsx 로 설정
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": ["es6"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"] //  ts 파일과 tsx 파일을 포함
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js", "app.tsx"]
 }

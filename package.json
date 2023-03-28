@@ -1,12 +1,14 @@
 {
   "name": "nomadcoffee-app-ver",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.{tsx,js,ts}\" --fix",
+    "lint:public": "eslint App.tsx --fix"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.7",

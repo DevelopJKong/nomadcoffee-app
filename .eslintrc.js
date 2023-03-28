@@ -12,7 +12,7 @@ module.exports = {
     node: true,
     jest: true,
   },
-  ignorePatterns: ['.eslintrc.js', 'node_modules/', 'dist/', 'build/', 'coverage/', 'metro.config.js'],
+  ignorePatterns: ['.eslintrc.js', 'node_modules/', 'dist/', 'build/', 'coverage/', 'metro.config.js', 'index.ts'],
   rules: {
     'spaced-comment': 'warn', // ! 주석에 공백을 사용하면 경고를 발생시킵니다.
     'no-debugger': 'warn', // ! debugger 사용하면 경고를 발생시킵니다.
