@@ -82,7 +82,7 @@ function AnimatedSplashScreen({ children, image }: IAppLoader) {
       {isAppReady && children}
       {!isAnimationComplete && (
         <Animated.View
-          pointerEvents='none'
+          pointerEvents='none' // eslint-disable-line
           style={[
             StyleSheet.absoluteFill,
             {

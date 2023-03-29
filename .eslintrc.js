@@ -36,7 +36,7 @@ module.exports = {
     // ! 추가
     camelcase: 'warn', // ! 카멜케이스를 사용하지 않으면 경고를 발생시킵니다.
     quotes: ['error', 'single', { allowTemplateLiterals: true }], // ! 따옴표 사용 & 템플릿 리터럴 허용
-    'no-duplicate-imports': 'error', // ! 중복된 import를 사용하면 에러를 발생시킵니다.
+    'no-duplicate-imports': 'error', // ! 중복된 import 를 사용하면 에러를 발생시킵니다.
     '@typescript-eslint/no-empty-function': 'warn', // ! 빈 함수를 사용하면 경고를 발생시킵니다.
     '@typescript-eslint/ban-ts-comment': [
       'error',
