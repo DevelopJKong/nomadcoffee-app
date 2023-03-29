@@ -3,7 +3,8 @@ import { View, Animated, StyleSheet } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import { Asset } from 'expo-asset';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import Main from './src/pages/main.page';
+import Root from './src/navigations/root.navigation';
+import { NavigationContainer } from '@react-navigation/native';
 
 interface IAppLoader {
   children: React.ReactNode;
@@ -20,7 +21,9 @@ const App = () => {
   return (
     <AnimatedAppLoader image={{ uri: 'https://i.imgur.com/dtuN6qr.png[/img]' }}>
       <SafeAreaProvider>
-        <Main />
+        <NavigationContainer>
+          <Root />
+        </NavigationContainer>
       </SafeAreaProvider>
     </AnimatedAppLoader>
   );
@@ -82,7 +85,7 @@ function AnimatedSplashScreen({ children, image }: IAppLoader) {
       {isAppReady && children}
       {!isAnimationComplete && (
         <Animated.View
-          pointerEvents='none' // eslint-disable-line
+          pointerEvents="none" // eslint-disable-line
           style={[
             StyleSheet.absoluteFill,
             {
