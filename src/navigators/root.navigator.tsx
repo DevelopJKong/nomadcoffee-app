@@ -8,12 +8,13 @@ const Nav = createNativeStackNavigator();
 const Root = () => {
   return (
     <Nav.Navigator
+      initialRouteName="Tabs"
       screenOptions={{
         headerShown: false,
       }}
     >
-      <Nav.Screen name="Stacks" component={Stacks} />
       <Nav.Screen name="Tabs" component={Tabs} />
+      <Nav.Screen name="Stacks" component={Stacks} />
     </Nav.Navigator>
   );
 };
